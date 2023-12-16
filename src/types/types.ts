@@ -35,3 +35,9 @@ export interface ImageData {
     message: string[];
     status: string;
 }
+
+export interface LoadMoreProps {
+    setCustomerDetails: React.Dispatch<React.SetStateAction<CustomerPanelData>>;
+    selectedIndex: string;
+    setSelectedIndex: React.Dispatch<React.SetStateAction<string>>;
+}

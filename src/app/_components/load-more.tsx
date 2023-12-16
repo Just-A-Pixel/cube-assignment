@@ -5,17 +5,13 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Spinner from "./Spinner";
 import CardList from "./CardList";
-import { CustomerData, CustomerPanelData } from "@/types/types";
+import { CustomerData, LoadMoreProps } from "@/types/types";
 
 const LoadMore = ({
     setCustomerDetails,
     selectedIndex,
     setSelectedIndex,
-}: {
-    setCustomerDetails: React.Dispatch<React.SetStateAction<CustomerPanelData>>;
-    selectedIndex: string;
-    setSelectedIndex: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+}: LoadMoreProps) => {
     const [customers, setCustomers] = useState<CustomerData[]>([]);
     const [page, setPage] = useState(1);
 
