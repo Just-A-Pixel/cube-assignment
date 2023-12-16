@@ -31,6 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Limitations
 1. The Dog API sometimes throws a 404 when searching for a random image. In that case the 'alt' text is shown ("Image of a random dog").
+2. When the list reaches the end and a new iteration starts, the card in the older and newer list may get highlighted at once due to having the same ID. In a real world scenario, pagination will be handled at the backend and this issue won't occur. In this project, there is no way to tell if the pagination limit has been reached except hardcoding the value, which is not scalable. This is why the list starts from beginning instead. 
 ### Screenshots
 
 <img width="1916" alt="image" src="https://github.com/Just-A-Pixel/cube-assignment/assets/58350132/cc34940b-132c-4b0c-a650-6fbb552034c7">
