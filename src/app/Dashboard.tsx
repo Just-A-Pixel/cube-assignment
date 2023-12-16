@@ -11,6 +11,7 @@ const Dashboard = ({ sampleCardData }: { sampleCardData: CustomerData[] }) => {
         title: "",
         address: "",
     });
+    const [selectedIndex, setSelectedIndex] = useState<string>("");
 
     return (
         <>
@@ -20,8 +21,14 @@ const Dashboard = ({ sampleCardData }: { sampleCardData: CustomerData[] }) => {
                     <CardList
                         setCustomerDetails={setCustomerDetails}
                         sampleCardData={sampleCardData}
+                        selectedIndex={selectedIndex}
+                        setSelectedIndex={setSelectedIndex}
                     />
-                    <LoadMore setCustomerDetails={setCustomerDetails} />
+                    <LoadMore
+                        setCustomerDetails={setCustomerDetails}
+                        selectedIndex={selectedIndex}
+                        setSelectedIndex={setSelectedIndex}
+                    />
                 </div>
 
                 <div className=" w-3/5 bg-slate-100 text-black">

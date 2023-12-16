@@ -2,26 +2,23 @@ import React, { useState } from "react";
 import Card from "./Card";
 import { CardListProps, CustomerData } from "@/types/types";
 
-const CardList = ({ setCustomerDetails, sampleCardData }: CardListProps) => {
-    const [selectedIndex, setSelectedIndex] = useState<number>();
+const CardList = ({ setCustomerDetails, sampleCardData, setSelectedIndex, selectedIndex }: CardListProps) => {
 
-    const handleClick = (
-        index: number,
-        data: CustomerData
-    ) => {
-        setSelectedIndex(index);
+    const handleClick = (data: CustomerData) => {
+        setSelectedIndex(data.id);
         setCustomerDetails(data);
+        console.log();
     };
 
     return (
         <div className=" bg-slate-300">
-            {sampleCardData.map((data, index) => (
+            {sampleCardData.map((data) => (
                 <Card
                     name={data.name}
                     title={data.title}
-                    isActive={index === selectedIndex}
+                    isActive={data.id === selectedIndex}
                     onClick={() => {
-                        handleClick(index, data);
+                        handleClick(data);
                     }}
                     key={data.id}
                 />

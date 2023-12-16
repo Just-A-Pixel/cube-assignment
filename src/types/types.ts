@@ -16,6 +16,8 @@ export interface CardProps {
 export interface CardListProps {
     setCustomerDetails: (data: CustomerPanelData) => void;
     sampleCardData: CustomerData[];
+    selectedIndex: string;
+    setSelectedIndex: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface CustomerPanelData {

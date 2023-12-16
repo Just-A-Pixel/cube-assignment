@@ -9,8 +9,12 @@ import { CustomerData, CustomerPanelData } from "@/types/types";
 
 const LoadMore = ({
     setCustomerDetails,
+    selectedIndex,
+    setSelectedIndex,
 }: {
     setCustomerDetails: React.Dispatch<React.SetStateAction<CustomerPanelData>>;
+    selectedIndex: string;
+    setSelectedIndex: React.Dispatch<React.SetStateAction<string>>;
 }) => {
     const [customers, setCustomers] = useState<CustomerData[]>([]);
     const [page, setPage] = useState(1);
@@ -39,6 +43,8 @@ const LoadMore = ({
             <CardList
                 setCustomerDetails={setCustomerDetails}
                 sampleCardData={customers}
+                selectedIndex={selectedIndex}
+                setSelectedIndex={setSelectedIndex}
             />
             <div
                 className="flex justify-center items-center p-4 col-span-1 sm:col-span-2 md:col-span-3"
