@@ -29,6 +29,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 5. 10 users are shown initially. Lazy loading with infinite scroll has been implemented to show more users. The json used contains a 100 users. 
 6. When the end of the user list is reached, it starts again from the beginning.
 
+### Limitations
+1. The Dog API sometimes throws a 404 when searching for a random image. In that case the 'alt' text is shown ("Image of a random dog").
 ### Screenshots
 
 <img width="1916" alt="image" src="https://github.com/Just-A-Pixel/cube-assignment/assets/58350132/cc34940b-132c-4b0c-a650-6fbb552034c7">
