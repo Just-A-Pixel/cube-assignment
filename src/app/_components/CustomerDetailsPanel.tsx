@@ -45,7 +45,7 @@ const CustomerDetailsPanel = ({ title, name, address }: CustomerPanelData) => {
     }, [title, name]);
 
     return (
-        <div className=" p-8 md:p-16 flex flex-col">
+        <div className=" p-8 md:p-16 flex flex-col ">
             <h1 className="mb-4 text-center"> {name}</h1>
             {title && (
                 <p className=" text-primary text-center">
@@ -64,18 +64,20 @@ const CustomerDetailsPanel = ({ title, name, address }: CustomerPanelData) => {
             <div className="grid grid-cols-3 mt-16 mx-auto">
                 {imageData.map((data: string, index) => {
                     return (
-                        <div key={index} className=" w-[250px] h-[250px] m-6">
+                        <div
+                            key={index}
+                            className=" w-[210px] h-[210px] m-6 border relative rounded-lg shadow-lg"
+                        >
                             {isLoading ? (
-                                <div className=" relative bottom-0 left-0 translate-x-1/2 translate-y-1/2">
+                                <div className=" relative flex justify-center items-center w-full h-full  ">
                                     <Spinner />
                                 </div>
                             ) : (
                                 <Image
-                                    width={150}
-                                    height={150}
+                                    fill={true}
                                     src={data}
                                     alt="Image of a random dog"
-                                    className=" object-scale-down"
+                                    className=" object-cover rounded-lg "
                                 />
                             )}
                         </div>
