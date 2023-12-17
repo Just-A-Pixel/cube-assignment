@@ -1,8 +1,8 @@
 Project can be viewed live at [https://cube-assignment-psi.vercel.app/](https://cube-assignment-psi.vercel.app/)
 
-## Getting Started
-
-First, run the development server:
+## Running locally
+1. In the root directory: ```npm install```
+2. Run the development server:
 
 ```bash
 npm run dev
